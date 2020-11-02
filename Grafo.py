@@ -31,12 +31,6 @@ class Edge:
     def opposite(self, v):
         return self._destination if v is self._origin else self._origin
     
-    def destination(self):
-        return self._destination
-    
-    def origin(self):
-        return self._origin
-    
     def __hash__(self):
         return hash((self._origin , self._destination))
 

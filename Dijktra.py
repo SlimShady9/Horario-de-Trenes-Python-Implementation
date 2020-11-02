@@ -42,16 +42,15 @@ def shortest_path_three(g, s, d):
     
     return tree
     
-# Bad implementation of a no directed graph
-# Better use of edge.opposite() intead of edge.origin()
 
-def format_each_path_three(g,s,d, to):
+
+def format_path_to_three(g,s,d, to):
 
     edge = d[to]
+    next_v = edge.opposite(to)
     three = [edge]
-    while edge.origin() != s:
-        next_v = edge.origin()
+    while not s in edge.endpoints():
         three.append(d[next_v])
         edge = d[next_v]
-
+        next_v = edge.opposite(next_v)
     return reversed(three)

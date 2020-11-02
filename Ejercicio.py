@@ -1,5 +1,5 @@
 from Grafo import Graph
-from Dijktra import shortest_path_lengths, shortest_path_three, format_each_path_three
+from Dijktra import shortest_path_lengths, shortest_path_three, format_path_to_three
 
 grafo = Graph()
 
@@ -11,7 +11,7 @@ E = grafo.insert_vertex('E')
 F = grafo.insert_vertex('F')
 G = grafo.insert_vertex('G')
  
-grafo.insert_edge(B, A,8)
+grafo.insert_edge(A, B,10)
 grafo.insert_edge(A, C,15)
 grafo.insert_edge(B, D, 4)
 grafo.insert_edge(B, C, 9)
@@ -23,7 +23,7 @@ grafo.insert_edge(G, A, 1)
 
 cloud = shortest_path_lengths(grafo, B)
 tree = shortest_path_three(grafo, B, cloud)
-f_three = format_each_path_three(grafo, B, tree, A)
+f_three = format_path_to_three(grafo, B, tree, A)
 
 for i in f_three:
     print(i)
