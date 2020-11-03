@@ -24,7 +24,7 @@ grafo.insert_edge(G, A, 1)
 cloud = shortest_path_lengths(grafo, B)
 tree = shortest_path_three(grafo, B, cloud)
 f_three = format_path_to_three(grafo, B, tree, A)
-
+print('Viaje de:', B, ' a', A)
 for i in f_three:
     print(i)
 print('Coste del viaje', cloud[A])

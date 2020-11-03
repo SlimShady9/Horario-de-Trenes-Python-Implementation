@@ -42,8 +42,6 @@ def shortest_path_three(g, s, d):
     
     return tree
     
-
-
 def format_path_to_three(g,s,d, to):
 
     edge = d[to]
